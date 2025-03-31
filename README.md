@@ -1,6 +1,12 @@
 # SEMT20003: Introduction to AI
 The course will introduce AI, with a focus on neural networks in PyTorch.
 
+## Changelog
+* Changes to the last part (Sec. 6 and onwards) of the LLM notes. 
+* Clarified that the _code_ in the notebook in week 8 is non-examinable.  The statement at the top of that notebook now reads: "The code in this notebook is non-examinable!! We're doing some slightly weird stuff to get the nice visualisations!! Its the concepts illustrated in the notebook that are examinable!! i.e. only the stuff covered in the associated video is examinable."
+* Added a note on extra exercises to this README.
+* Added links to practice exams to this README.
+
 ## Staff
 - [Laurence Aitchison](http://www.gatsby.ucl.ac.uk/~laurence/) [laurence.aitchison@bristol.ac.uk] (unit director)
 
@@ -12,7 +18,7 @@ Linear algebra, basic statistics, basic Python.
 
 ## Course Structure
 
-The course is taught in a "flipped classroom model".  So there are no in-person lectures (we wouldn't be able to schedule them anyway given the wide range of cohorts on the course).  Instead, there are extensive pdf notes, iPython notebooks and videos.  There is a weekly 2-hour TA-led problem class.  In that session, you can work on the question sheets and/or iPython notebooks, and ask TAs any questions on that material, or on any other part of the course. <!--, and the 1-hour weekly lecturer-led QA session (see Feedback below).-->
+The course is taught in a "flipped classroom model".  So there are no in-person lectures (we wouldn't be able to schedule them anyway given the wide range of cohorts on the course).  Instead, there are extensive pdf notes, iPython notebooks and videos.  There is a weekly 2-hour lab/problem class.  In that session, you can work on the question sheets and/or iPython notebooks, and ask TAs/me any questions on that material, or on any other part of the course. <!--, and the 1-hour weekly lecturer-led QA session (see Feedback below).-->
 
 
 ## Course Materials
@@ -33,9 +39,10 @@ Course materials for each week will be posted here on Monday.  Course materials 
   - To reiterate, the exam is based on the notes/notebooks, _not_ the videos.
 
 ## Synchronous sessions.
-* TA-led labs/problem classes 11am-1pm on Thursdays in QUEENS BLDG F.101a/b/c.  These start in week 1 (16th January).  In this time you should:
-  - Work on the exercises in the pdf notes + CoLab notebooks for that week.
-  - Ask TAs about these exercises (or anything else in the course).
+* Labs/problem classes 11am-1pm on Thursdays in QUEENS BLDG F.101a/b/c.  These start in week 1 (16th January):
+  - TAs will be at all of these sessions.  I will be at most of the sessions.
+  - In these sessions, you can work on the exercises in the pdf notes + CoLab notebooks for that week.
+  - You can ask TAs/me about these exercises (or anything else in the course).
   - (Note that more "organised" material in this course is not really possible, as the course is taken so widely that some students have clashes with these sessions).
 <!-- * Online, lecturer-led QA sessions, Thursday 4-5pm in TB1.  Held as a Teams meeting from the course Team.
   - Again, this is for feedback on all parts of the course, including lectures, notes, questions, iPython notebooks, past exams and the group coursework.
@@ -55,10 +62,11 @@ Other points:
 
 ## Exam
 * These exams are in the standard TB2 assessment period.
-* The exam will be a 2 hour, 20 question, multiple choice, in-person exam.
+* The exam will be a 3 hour, 20 question, multiple choice, in-person exam.
 * The exam is primarily based on the material in the pdf notes.
-* But the material in the CoLab notebooks is examinable.  I may ask in-detail about the material in the first week's CoLab notebooks (as you can see from Q1 and Q2 of the sample exam).  For instance, you should know what `t.ones(2,3,4)` or `A.mean(2)` does (along with the material in the GPU and intro to Python notebooks).  You aren't expected to know the material in the rest of the CoLab notebooks in that level of detail.  Specifically, the material in the rest of the CoLab notebooks may be examined in a couple of ways:
-  - The CoLab exams can illustrate examinable concepts (e.g. Q7 and Q10 in the sample exam).
+* But the material in the CoLab notebooks is examinable.  I may ask in-detail about the material in the first week's CoLab notebooks (as you can see from Q1 and Q2 of the sample exam).  For instance, you should know what `t.ones(2,3,4)` or `A.mean(2)` _does_ (along with the material in the GPU and intro to Python notebooks).  I won't ask questions that hinge on your knowledge of syntax, such as "how do you construct a tensor of zeros: `t.zeros(1)(2)` or `t.zeros(1.2)` or `t.zeros[[1],[2]]`.  But I might ask questions that hinge on your ability to read and interpret syntactically valid code.
+* You aren't expected to know the material in the rest of the CoLab notebooks in that level of detail.  Specifically, the material in the rest of the CoLab notebooks may be examined in a couple of ways:
+  - The CoLab notebooks can illustrate examinable concepts (e.g. Q7 and Q10 in the sample exam).
   - You may need to read more neural-network-y code, but where all information required would be clearly available in the code itself.  For instance, I could ask for a verbal description of the following neural network layer: `nn.Sequential(nn.Linear(in_features=100, out_features=200), nn.ReLU())`. I could give then several possible descriptions, with the correct description being: "A linear layer that takes vectors with 100 features and returns feature vectors with 200 features, followed by a relu nonlinearity".  But I wouldn't ask you to do that for `nn.Sequential(nn.Linear(100, 200), nn.ReLU())` as the code doesn't tell you what argument is `in_features` and which is `out_features`, and you really should to look it up to be sure.
 * Things have changed quite alot since I took over the course, so the previous EMAT31530 exam is relevant, but nothing before that.
 * The exam will focus on the _concepts_ rather than requiring you to learn specific math equations / PyTorch functions.
@@ -66,13 +74,23 @@ Other points:
 * The formula sheet in the sample exam is the same as that in the paper.
 * I'm going to try hard to avoid needing memorisating equations in questions (see practice exams for details).
 
-<!--
-## Practice exam!
-[practice exam](exams/sample.pdf)
+### Calculators in the exam
 
-[practice exam answers](exams/sample_answers.pdf)
--->
+* The Methods of Artificial Intelligence Exam summer examination permits the use of a non-programmable calculator. We recommend the Casio FX-85 GT CW (solar-powered) or Casio FX-83GT CW (battery-powered).
+* Please be advised that the use of a programmable calculator will be treated as an examination offence (and is likely to incur a penalty under the University Assessment Regulations). Your calculator will be visually checked by an invigilator during each exam.
+* For students who do not own or are unable to obtain a non-programmable calculator prior to their exam, please contact the SEMT school office for further advice: semt-student-enquiries@bristol.ac.uk (e-mail enquiries) or Ada Lovelace Building room G1 (in-person enquiries; 9am-4pm Monday-Friday).
+* If you are unsure whether your calculator is programmable or not, our recommendation is to use Google to search for your calculator model, and whether it is programmable or non-programmable. This usually provides a clear answer. Additionally, calculator brand websites often list this information under the product description for each model. If you are concerned and want someone to double check, the SEMT school office can offer support - see the contact details above.
 
+### Practice exam!
+Note that these previous exams are shorter (2 hour , 15 questions), whereas the exam this year is longer (3 hours , 20 questions).  The questions this year are exactly the same type and difficulty as the questions in previous years: the exam is just a bit longer.
+
+[sample exam](exams/sample.pdf)
+
+[sample exam answers](exams/sample_answers.pdf)
+
+[23/24 exam](exams/2324.pdf)
+
+[23/24 exam answers](exams/2324_answers.pdf)
 
 ## Understanding the capabilities of modern AI by it questions about the course
 
@@ -80,18 +98,26 @@ There are two problems:
 * The course will introduce to the basics of how to train modern AI systems.  But it is also important for you to understand the capabilities of modern state-of-the-art AI systems.
 * At the same time, you're going to have questions about the course material.  You can of course ask on the Teams, and in the TA-led problem classes.  But what if you want feedback immediately?
 
-The solution is: try asking modern AI systems!  Specifically, for this kind of thing (programming, math deep learning), most people reckon that [Claude](https://claude.ai) is the best model.  I have been using Claude to help me to e.g. understand recent research in deep learning, so its definitely at the point where it can help you learn!  Note that:
-* The university doesn't have a subscription to Claude.  So you may need to get a personal subscription (I have one).
+The solution is: try asking modern AI systems!  Specifically, for this kind of thing (programming, math deep learning), people reckon:
+* [Gemini](https://gemini.google.com/app)
+* [Claude](https://claude.ai)
+* [Grok](https://grok.com)
+* [DeepSeek](https://chat.deepseek.com)
+* [ChatGPT](https://chatgpt.com) (But only o1, o3 etc, _not_ GPT-4o).
+
+Are all pretty good.  There is a feeling that Claude is the best for programming, buts its pretty close.  I have been using Claude to help me to e.g. understand recent research in deep learning, so these models are definitely at the point where they can help you learn!  Note that:
+* The university doesn't have a subscription to Claude.  So you can consider getting a personal subscription (I have one).  Other providers tend to have more/better free models available though.
 * If you want to ask about something specific that turns up e.g. in the lecture notes, you can attach the lecture notes to your message to Claude!
-* Claude is pretty good in 99% of cases.  But like a TA, Claude can be wrong.  When these models are wrong, it is called a "hallucination" in deep learning research.  Some thoughts on that:
-  - Claude doesn't have access to the internet.  So if you're asking about something super specific (e.g. something that only turns up in a few research papers), it may "misremember".  Try attaching some material (e.g. a paper on the topic) to your message to Claude!
-  - Claude can hallucinate if you ask leading questions.  For instance, if its impossible to do \<task\> in \<Python library\>, but you ask it  "How do I do \<task\> in \<Python library\>" anyway, it will often try anyway and give you a wrong solution.  Try to ask open-ended, non-leading questions.
+* These models are pretty good in 99% of cases.  But like me/a TA, Claude can be wrong.  When these models are wrong, it is called a "hallucination" in deep learning research.  Some thoughts on that:
+  - These models do not by default not have access to the internet (sometimes they do, but atm, you have to turn that on using a "search" or similar button).  So if you're asking about something super specific (e.g. something that only turns up in a few research papers), it may "misremember".  Try attaching some material (e.g. a paper on the topic) to your message to Claude!
+  - These models can hallucinate if you ask leading questions.  For instance, if its impossible to do \<task\> in \<Python library\>, but you ask it  "How do I do \<task\> in \<Python library\>" anyway, it will often try anyway and give you a wrong solution.  Try to ask open-ended, non-leading questions.
+* Be careful about which model you're asking.  Most of the providers have some good, expensive models and some less good, but cheaper models.  These platforms will often give free users some access to the good model, but quickly force you onto the less good model as you continue using it.
 
-Claude is definitely going to supercharge your learning if you ask it all your questions as you're learning.  However, Claude can also write code, solve exercises etc. for you.  I don't think we have any research on this, but that is likely to be detrimental to your learning.  So be careful.  My advice is: use Claude to help you learn more quicker, and think harder and deeper.  Don't switch off brain and have Claude do stuff for you!
+These models can supercharge your learning if you ask it about things you're confused about as you're learning.  As I am sure you are aware, they can also write code, solve exercises etc. for you.  I don't think we have any research on this, but that is likely to be detrimental to your learning.  And of course, in the exam, you won't have access to these models!  So be careful.  My advice is: use these models to help you learn more quicker, and think harder and deeper.  Definitely don't switch off brain and have them do stuff for you!
 
-Finally, there's alot that Claude can't do.  Despite the hype, it can't by itself build large programs/systems, nor can it write (interesting) research papers, and it definitely can't to any mechanical/civil engineering.  But Claude can dramtically accelerate experts as they do those things.  And Claude can definitely help you learn those things.  
+Finally, there's alot that these models can't do.  Despite the hype, it can't by itself build large programs/systems, nor can it write (interesting) research papers, and it definitely can't to any mechanical/civil engineering.  But they can dramtically accelerate experts as they do those things.  And they can definitely help you learn those things.  
 
-Overall, these AI systems are some of the most powerful tools humanity has, and so learning to use them effectively is a critical skill!
+Overall, these AI systems are some of the most powerful tools humanity has developed, and so learning to use them effectively is a critical skill!
 
 ## Other resources:
 
@@ -101,6 +127,12 @@ Overall, these AI systems are some of the most powerful tools humanity has, and 
 * [Andrej Karpathy's course on building neural networks, from scratch, in code.](https://karpathy.ai/zero-to-hero.html)
 * [Harvard Annotated Transformer](https://nlp.seas.harvard.edu/annotated-transformer/)
 * Usually searching Google for a given topic will give a bunch of blog posts on the subject (often in places like [Towards Data Science](https://towardsdatascience.com))
+
+## Extra exercises
+
+The exercises in the pdf notes and Colab notebooks are supposed to be complete.  But I have had a query about extra exercises.
+
+If you find yourself in this position, the best exercise is to go through my Colab notebooks, looking mainly at my text (i.e. not the code).  Then close my notebook, and reproduce the code yourself.  If you can do that, you'll understand everything in the course really deeply.  And if you can reproduce the code in the non-examinable backprop notebook, let me know and I can chat to you about PhDs :-).
 
 ## Downloading the notes
 
@@ -127,7 +159,7 @@ In any case, there will definitely be material you haven't seen in notebook 1.2 
 | [Notebook 1.3: GPUs with PyTorch](https://colab.research.google.com/drive/1EjqE4eDioEdWJwWm_KnO0CPTds3LHKyC?usp=sharing) | N/A | 
 | N/A | [Week 1 QA (23/24) (34:10)](https://uob.sharepoint.com/:v:/t/UnitTeams-EMAT31530-2023-24-TB-4-A/EXezUO44d2dBrZ2vyfWoyKIB4Cdcnj-MzMttYVCp3vGl_A) |
 
-<!--
+
 #### Week 2: Linear Regression
 
 | Notes/Notebook | Video (if available) |
@@ -171,13 +203,15 @@ PyTorch does this using the backprop algoritm, and the backprop algorithm to com
 This might be a bit tougher than other weeks, as it involves going back-and-forth between the math and the code.
 But once you really understand backprop, you'll really know (and be able to reason about) what goes on in modern AI.
 
+Note that Notebook 5.2 is "formally" non-examinable, but should be super-useful in reinforcing the examinable material in the notes!
 
 | Notes/Notebook | Video (if available) |
 | ---- | ---- |
-| [notes](notes/5_backprop/backprop.pdf) | [notes video 1 (20:06)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/EbbvdyCRZRJMoa9YBt0SLKYB7R5FSZqzQPk6dr9352uomw) |
-| | [notes video 2 (15:48)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/ESL-W0p5tYJPriVWJrZdzzkBwHxvFDyGkiQKhHyPrAJIOQ) |
-| | [notes video 3 (15:04)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/EUow4gEqGHNNi7kRqL4oussB1Se_WQpl2qExDJx1F0Uv7w) |
-| | [notes video 4 (20:59)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/EZH1PMMjpXhKtu9rzWHtQSYBkQyrUV1qs_-48zrNNx7VBA) |
+| [notes](notes/5_backprop/backprop.pdf) | [notes video 1 (16:55)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/EU6TPdQ0WoBEqn3TeUAn-e0B0xPLT5Ypz-XHSTAA2A2Jlw?e=ahw3VY) |
+| | [notes video 2 (23:40)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/EaSlQHNHczhGs5JRfnAHxq4BWaM7OkuqXu5RTM8_tCtLzQ?e=fcNBJO) |
+| | [notes video 3 (9:39)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/ERn7EiVTzMlLtDkf0YT5jB0BNd4fIOg-40RWu_VfOtJtSA?e=xWuOpq) |
+| | [notes video 4 (7:00)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/EdFpkDWzP5FBhQCbdWHIw0oBTp2W9CC24M-zS9rP3egnug?e=eBQbtQ) |
+| | [notes video 5 (13:36)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/EY6fxAUMxn9AjzGggKxO62QBqSBDqdjshA_Q28Zk-hEb9Q?e=FgVThQ) |
 | [Notebook 5.1: Compute Graph](https://colab.research.google.com/drive/17aja1jqP-nrCZcQSTvMUVm1FkYrf_7ZM?usp=sharing) | N/A |
 | [Notebook 5.2: Backprop](https://colab.research.google.com/drive/1A4Ne83U5Yp45Yivjo9baDC3LO7XyIhEs?usp=sharing) | N/A |
 
@@ -199,8 +233,6 @@ That's what this week is all about.
 | [Notebook 7.1 torch.optim](https://colab.research.google.com/drive/1S3bcYEUpeaXEMae0gRILxhIYN7EQcMHN?usp=sharing) | N/A |
 | [Notebook 7.2 NNs for MNIST](https://colab.research.google.com/drive/1UA9-DSlbjoLp_vTYAi_bR7-6X6uvKMgi?usp=sharing) | N/A |
 
-Major Updates post initial release:
-* Proof of equivalence between the different formulations of SGD is now non-examinable.
 
 #### Week 8: Overfitting
 
@@ -239,20 +271,15 @@ This week we'll take a very high-level look at modern large language models.
 | ---- | ---- |
 | [notes](notes/10_llms/llm.pdf) | [notebook video 1 (8:30)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/EUpV3cefSAFHmt72QTKa8VgBa4tmOA06c5goOgR5EOgRZA?e=gmusoy) |
 | | [notebook video 2 (12:04)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/EVfJV1I7gMhMkiwhiId0rcQBHDuOZCH6buF1XKQID3d0lA?e=lQMfup) |
-| | [notebook video 3 (20:58)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/EdbMDBxkAhNAs_b5Dlgm8HoBsaS0UAeus0V_uEbouxk8mg?e=hSA77f) |
+| | [notebook video 3 (23:17)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/EYk_H6-j8Q5DkTWFb2LOi3kBzw5bkt_14ViZVaUscrndVg?e=uENEu8) |
+| | [notebook video 4 (21:02)](https://uob.sharepoint.com/:v:/t/grp-LAlectures/ERqEcCBXSvRAt_U33IfMvaQBcxaoeg1NakEq8M3AjQ4ewQ?e=DjeTvM) |
 | [Notebook 10.1 Strings](https://colab.research.google.com/drive/11fXTOUD_XJw3aRFQd2SQHxMFsLAqfuoq?usp=sharing) | N/A |
 | [Notebook 10.2 Tokenization](https://colab.research.google.com/drive/1y-9Ezr6Kfn74QDtD-rqyF_JRH3zAEZNW?usp=sharing) | N/A |
 | [Notebook 10.3 Attention](https://colab.research.google.com/drive/1wLaBNwbHT10UkvSuHfO6wgtrAqmqVkpg?usp=sharing) | N/A |
 
-#### Week 11: Revision
-[practice exam](exams/sample.pdf)
 
-[practice exam answers](exams/sample_answers.pdf)
+#### Week 11/12: Revision
 
-The lecturer led QA on  7th December and lab session on  8th December are running.  You may use the lab to go through the practice exam, and you may ask the TA/lecturer about the practice exam, or about anything else that comes up as part of your revision.
+There will be 2 hour revision sessions on 11am-1pm on Thursdays in QUEENS BLDG F.101a/b/c as usual.
 
-
-#### Week 12: Revision
-
-The lecturer led QA on 14th December and lab session on 15th December are running.  You may use the lab to go through the practice exam, and you may ask the TA/lecturer about the practice exam, or about anything else that comes up as part of your revision.
--->
+<!--     -->
